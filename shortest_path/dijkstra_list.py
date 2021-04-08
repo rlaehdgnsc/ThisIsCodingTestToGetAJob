@@ -10,7 +10,7 @@ graph = [[] for _ in range(n+1)]
 v = [False]*(n+1)
 dis = [INF]*(n+1)
 
-def get_smallest_dis():
+def get_shortest_dis():
     m = INF
     node = 0
     for i in range(1,n+1):
@@ -27,7 +27,7 @@ def dijkstra(s):
         dis[j[0]] = j[1]
 
     for i in range(n-1):
-        cur = get_smallest_dis()
+        cur = get_shortest_dis()
         v[cur] = True
 
         for j in graph[cur]:
